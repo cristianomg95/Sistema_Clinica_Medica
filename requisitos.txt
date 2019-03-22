@@ -1,0 +1,11 @@
+Cadastro de paciente (nome, email, telefone, rg, cpf, endereço, numero, bairro, cidade, uf, plano de saúde)
+Cadastro de médico (nome, email, telefone, celular, crm, rg, cpf, especialização,endereço, numero, bairro, cidade, uf, plano de saúde)
+Marcar consulta(medico, paciente, data, hora)
+Listar pacientes
+Listar Médicos
+Remover médico
+Listar consulta
+Remover consulta
+Folha de pagamento médico
+Gerar gráficos de consultas por dia e por mês
+O sistema deve persistir os dados (ou seja, salvar em arquivo e permitir abrir o arquivo)

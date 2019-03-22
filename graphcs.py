@@ -1,0 +1,2 @@
+def generateQueryGraphics():
+  pass
