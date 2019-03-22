@@ -31,3 +31,6 @@ onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquiv
 - Funções de validação foram escritas no arquivo validate.py
 - Funções para imprimir lista dos dados foram escritas no arquivo printAll.py
 - Funções para gerar graficos foram escritas no arquivo graphcs.py
+# Funções Implementadas
+- Cadastro de paciente
+- Cadastro de médico
