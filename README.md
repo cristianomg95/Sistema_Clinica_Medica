@@ -19,7 +19,7 @@ O sistema foi desenvolvido em python utilizando o paradigma de programação est
 - Gerar gráficos de consultas por dia e por mês
 - O sistema deve persistir os dados (ou seja, salvar em arquivo e permitir abrir o arquivo)
 
-# Persistencia dos dados
+# Persistência dos dados
 Os dados foram salvos usando a biblioteca pickle 
 onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquivo.pickle
 
@@ -31,6 +31,15 @@ onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquiv
 - Funções de validação foram escritas no arquivo validate.py
 - Funções para imprimir lista dos dados foram escritas no arquivo printAll.py
 - Funções para gerar graficos foram escritas no arquivo graphcs.py
-# Funções Implementadas
+- Funções que lidam com Ids foram escritas no arquivo generateId.py
+
+# Funções Implementadas até momento
 - Cadastro de paciente
 - Cadastro de médico
+- Marcar consulta
+- Remover Médico
+- Remover Consulta
+- Gerar Id de cada consulta
+- Persistência dos dados em pickle
+
+
