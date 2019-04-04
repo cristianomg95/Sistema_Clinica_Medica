@@ -47,5 +47,6 @@ onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquiv
 - Listar Pacientes
 - Listar Médicos
 - Listar Consultas Marcadas
-
+- Geração de graficos
+- Folha de Pagamento
 
