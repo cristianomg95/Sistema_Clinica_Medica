@@ -2,6 +2,7 @@ import printAll
 from register_remove import *
 from graphcs import *
 import os
+import payRoll
 
 def menu():
   os.system("cls")
@@ -37,7 +38,7 @@ def menu():
   elif option == "8":
     removeQuery()
   elif option == "9":
-    printAll.printPayroll()
+    payRoll.mainPayRoll()
   elif option == "10":
     generateQueryGraphics()
   elif option == "11":

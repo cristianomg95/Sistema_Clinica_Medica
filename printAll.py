@@ -15,9 +15,6 @@ def printHeader2(parameters): # printar o cabeçalho // parameters é um vetor c
     print("{0:<20}".format(i), end="")
 
 
-def printPayroll(): # listar folha de pagamentos
-  pass
-
 def printPatients(): # listar lista de pacientes
   os.system("cls")
   patients = loadPatients()
