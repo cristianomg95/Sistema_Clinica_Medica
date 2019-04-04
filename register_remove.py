@@ -1,8 +1,9 @@
 from load_Save import *
-from validate import *
 from time import sleep
 from generateId import *
-import os, uuid
+import os
+import validate
+import graphcs as gp
 
 def registerPatient(): # cadastrar paciente
   os.system("cls")
@@ -20,6 +21,9 @@ def registerPatient(): # cadastrar paciente
   patient.append(rg)
   cpf = input("CPF: ").lower()
   patient.append(cpf)
+
+  print("{0:-^42}".format("ENDEREÇO"))
+
   address = input("Endereço:").lower()
   patient.append(address)
   number = input("Número da residência: ").lower()
@@ -39,7 +43,7 @@ def registerPatient(): # cadastrar paciente
   sleep(2)
 
   msg = "Deseja Cadastrar outro Paciente? [y/n]"
-  validateToRepeat(msg,lambda: registerPatient())
+  validate.validateToRepeat(msg,lambda: registerPatient())
 
 def registerDoctor(): # cadastrar médico
   os.system("cls ")
@@ -83,12 +87,13 @@ def registerDoctor(): # cadastrar médico
   sleep(2)
 
   msg = "Deseja Cadastrar outro Médico? [y/n]"
-  validateToRepeat(msg, lambda: registerDoctor())
+  validate.validateToRepeat(msg, lambda: registerDoctor())
 
 def registerQuery(): # marcar consulta
   os.system("cls")
   querys = loadQuerys()
   ids = loadIds(querys)
+  df = gp.loadDataFrame()
   query = []
   print("{0:-^92}".format("MARCAR CONSULTA"))
   query.append(generateId(ids))
@@ -98,16 +103,20 @@ def registerQuery(): # marcar consulta
   query.append(patient)
   date = input("Data:(DD/MM/AAAA")
   query.append(date)
+  var = date.split("/")
+  varD = int(var[0]-1)
+  varM = int(var[1]-1)
+  df[varM][varD] = df[varM][varD]+1
+  gp.saveDataFrame(df)
   hour = input("Horário: ")
   query.append(hour)
-
   querys.append(query)
   saveQuery(querys)
   print("Consulta Marcarda!!!")
   sleep(2)
 
   msg = "Deseja continuar marcando consultas? [y/n]: "
-  validateToRepeat(msg, lambda: registerQuery())
+  validate.validateToRepeat(msg, lambda: registerQuery())
 
 def removeDoctor(): ## função para remover medicos do sistema
   os.system("cls")
@@ -128,7 +137,7 @@ def removeDoctor(): ## função para remover medicos do sistema
       saveDoctor(doctors)
   else:
     print("Médico não encontrado!!")
-  validateToRepeat(msgRepeat, lambda: removeDoctor())
+  validate.validateToRepeat(msgRepeat, lambda: removeDoctor())
 
 def removeQuery():
   os.system("cls")
@@ -150,7 +159,8 @@ def removeQuery():
   else:    
     print("Consulta não encontrada!!")
   msgRepet = "Deseja continuar removendo consultas?[y/n] "
-  validateToRepeat(msg, lambda: removeQuery())
+  validate.validateToRepeat(msg, lambda: removeQuery())
+
 
 
   

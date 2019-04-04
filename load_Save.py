@@ -35,3 +35,4 @@ def saveDoctor(doctors): # salvar médicos no banco de dados
 
 def saveQuery(querys): # salvar consultas no banco de dados
   pk.dump(querys, open("dados//querys.pickle", "wb"))
+

@@ -1,9 +1,12 @@
-# Sistema_Clinica_Medica
+# Sistema_Clinica_Medica (Em Desenvolvimento)
 Sistema criado para disciplina de laboratório de programação do curso de ciências da computação da universidade Tiradentes 
 
 # Especificações do sistema
 O sistema foi criado com intuito de praticar o uso de bibliotecas tais como pickle e pandas
 O sistema foi desenvolvido em python utilizando o paradigma de programação estruturada
+
+# Objetivo do Projeto
+O objetivo do projeto é praticar o manuseio de novas bibliotecas apresentadas na disciplina 
 
 # Funções que o sistema deve possuir 
 
@@ -41,5 +44,8 @@ onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquiv
 - Remover Consulta
 - Gerar Id de cada consulta
 - Persistência dos dados em pickle
+- Listar Pacientes
+- Listar Médicos
+- Listar Consultas Marcadas
 
 

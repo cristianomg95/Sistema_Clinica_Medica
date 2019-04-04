@@ -1,10 +1,11 @@
-from printAll import *
+import printAll
 from register_remove import *
 from graphcs import *
 import os
 
 def menu():
   os.system("cls")
+  print("{0:-^92}".format("SISTEMA CLÍNICA MÉDICA"))
   print("1 - Cadastrar Paciente")
   print("2 - Cadastrar Médico")
   print("3 - Marca Consulta")
@@ -26,21 +27,21 @@ def menu():
   elif option == "3":
     registerQuery()
   elif option == "4":
-    printPatients()
+    printAll.printPatients()
   elif option == "5":
-    printDoctors()
+    printAll.printDoctors()
   elif option == "6":
     removeDoctor()
   elif option == "7":
-    printQuerys()
+    printAll.printQuerys()
   elif option == "8":
     removeQuery()
   elif option == "9":
-    printPayroll()
+    printAll.printPayroll()
   elif option == "10":
-    generateQueryGraphics('dia')
+    generateQueryGraphics()
   elif option == "11":
-    generateQueryGraphics('mes')
+    printDf()
 
 if __name__ == "__main__":
   menu()
