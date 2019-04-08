@@ -12,7 +12,7 @@ O sistema foi desenvolvido em python utilizando o paradigma de programação est
 # Objetivo do Projeto
 O objetivo do projeto é praticar o manuseio de novas bibliotecas apresentadas na disciplina 
 
-# Funções que o sistema deve possuir 
+# Funções que o sistema possui
 
 - Cadastro de paciente (nome, email, telefone, rg, cpf, endereço, numero, bairro, cidade, uf, plano de saúde)
 - Cadastro de médico (nome, email, telefone, celular, crm, rg, cpf, especialização,endereço, numero, bairro, cidade, uf, plano de saúde)
