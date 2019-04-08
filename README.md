@@ -1,4 +1,4 @@
-# Sistema_Clinica_Medica (Em Desenvolvimento)
+# Sistema_Clinica_Medica
 Sistema criado para disciplina de laboratório de programação do curso de ciências da computação da universidade Tiradentes 
 
 # Especificações do sistema
@@ -41,17 +41,4 @@ onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquiv
 - Funções que lidam com Ids foram escritas no arquivo generateId.py
 - Funções que lidam com a folha de pagamento foram escritas no arquivo payRoll.py
 
-# Funções Implementadas até momento
-- Cadastro de paciente
-- Cadastro de médico
-- Marcar consulta
-- Remover Médico
-- Remover Consulta
-- Gerar Id de cada consulta
-- Persistência dos dados em pickle
-- Listar Pacientes
-- Listar Médicos
-- Listar Consultas Marcadas
-- Geração de graficos
-- Folha de Pagamento
 
