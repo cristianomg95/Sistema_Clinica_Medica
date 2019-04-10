@@ -28,21 +28,21 @@ def menu():
   elif option == "3":
     registerQuery()
   elif option == "4":
-    printAll.printPatients()
+    printAll.printPatients(0)
   elif option == "5":
-    printAll.printDoctors()
+    printAll.printDoctors(0)
   elif option == "6":
     removeDoctor()
   elif option == "7":
-    printAll.printQuerys()
+    printAll.printQuerys(0)
   elif option == "8":
     removeQuery()
   elif option == "9":
     payRoll.mainPayRoll()
   elif option == "10":
-    generateQueryGraphics()
+    generateQueryGraphics("dia")
   elif option == "11":
-    printDf()
+    generateQueryGraphics("mes")
 
 if __name__ == "__main__":
   menu()

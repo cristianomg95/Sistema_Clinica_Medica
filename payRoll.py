@@ -1,4 +1,5 @@
 import os
+import validate
 def enterPayRoll():
   name = input("Nome:")
   salary = int(input("Salario: "))
@@ -15,7 +16,10 @@ def mainPayRoll():
   print()
   name, salary, discount = enterPayRoll()  
   result = calc(salary,discount)
-  print("Usuario: {}".format(name))
-  print("Salario Bruto: {}".format(salary))
-  print("Desconto: {}".format(discount))
-  print("Salario Liquido: {}".format(result))
+  variables = [name, salary, discount, result]
+  header = ["Usuario", "Salário Bruto", "Desconto", "Salario Liquido"]
+  for i in range(len(variables)):
+    print("`{}: {}".format(header[i],variables[i]))
+  msgRepeat = "Deseja continuar calculando folha de pagamentos?[y/n] "
+  validate.validateToRepeat(msgRepeat, lambda: mainPayRoll())
+

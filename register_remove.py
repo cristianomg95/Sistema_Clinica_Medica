@@ -5,87 +5,34 @@ import os
 import validate
 import graphcs as gp
 
+
 def registerPatient(): # cadastrar paciente
   os.system("cls")
+  print("{0:-^92}".format("CADASTRO DE PACIENTES"))
   patient = []
   patients = loadPatients()
-  print("{0:-^92}".format("CADASTRO DE PACIENTES"))
-
-  name = input("Nome do paciente: ").lower()
-  patient.append(name)
-  email = input("E-mail: ").lower()
-  patient.append(email)
-  phone = input("Telefone: ").lower()
-  patient.append(phone)
-  rg = input("Registro Geral (RG): ").lower()
-  patient.append(rg)
-  cpf = input("CPF: ").lower()
-  patient.append(cpf)
-
-  print("{0:-^42}".format("ENDEREÇO"))
-
-  address = input("Endereço:").lower()
-  patient.append(address)
-  number = input("Número da residência: ").lower()
-  patient.append(number)
-  neighborhood = input("Bairro: ").lower()
-  patient.append(neighborhood)
-  city = input("Cidade: ").lower()
-  patient.append(city)
-  uf = input("Estado: ").lower()
-  patient.append(uf)
-  healthPlan = input("Plano de Saúde: ").lower()
-  patient.append(healthPlan)
-
+  variables = ["Nome", "E-Mail", "Telefone", "RG", "CPF", "Endereço", "Numero", "Bairro", "Cidade", "Estado", "Plano de Saúde"]
+  for i in range(len(variables)):
+    patient.append(input("{}: ".format(variables[i])))
   patients.append(patient)
   savePatient(patients)
   print("Cadastro realizado!!!")
   sleep(2)
-
   msg = "Deseja Cadastrar outro Paciente? [y/n]"
   validate.validateToRepeat(msg,lambda: registerPatient())
 
 def registerDoctor(): # cadastrar médico
-  os.system("cls ")
-  doctors = loadDoctors()
+  os.system("cls")
   print("{0:-^92}".format("CADASTRO DE MÉDICOS"))
+  doctors = loadDoctors()
   doctor = []
-
-  name = input("Nome: ").lower()
-  doctor.append(name)
-  email = input("E-mail: ").lower()
-  doctor.append(email)
-  phone = input("Telefone: ").lower()
-  doctor.append(phone)
-  cellPhone = input("Celular: ").lower()
-  doctor.append(cellPhone)
-  crm = input("CRM: ").lower()
-  doctor.append(crm)
-  rg = input("Registro Geral (RG): ").lower()
-  doctor.append(rg)
-  cpf = input("CPF: ").lower()
-  doctor.append(cpf)
-  specialization = input("ESpecialização: ").lower()
-  doctor.append(specialization)
-
-  print("{0:-^42}".format("ENDEREÇO"))
-
-  street = input("Rua/Avenida: ").lower()
-  doctor.append(street)
-  number = input("Numero: ").lower()
-  doctor.append(number)
-  neighborhood = input("Bairro: ").lower()
-  doctor.append(neighborhood)
-  city = input("Cidade: ").lower()
-  doctor.append(city)
-  uf = input("UF: ").lower()
-  doctor.append(uf)
+  variables = ["Nome", "E-Mail", "Telefone", "Celular", "CRM", "RG", "CPF", "Especialização", "End", "Nº da Residencia ", "Cidade", "UF", "Plano de Saude"]
+  for i in range(len(variables)):
+    doctor.append(input("{}: ".format(variables[i])))
   doctors.append(doctor)
   saveDoctor(doctors)
-
   print("Cadastro realizado!!!")
   sleep(2)
-
   msg = "Deseja Cadastrar outro Médico? [y/n]"
   validate.validateToRepeat(msg, lambda: registerDoctor())
 
@@ -95,21 +42,16 @@ def registerQuery(): # marcar consulta
   ids = loadIds(querys)
   df = gp.loadDataFrame()
   query = []
+  variables = ["Nome do Médico", "Nome do Paciente", "Data:(DD/MM/AAAA)", "Horário "]
   print("{0:-^92}".format("MARCAR CONSULTA"))
   query.append(generateId(ids))
-  doctor = input("Nome do Médico: ")
-  query.append(doctor)
-  patient = input("Nome do Paciente: ")
-  query.append(patient)
-  date = input("Data:(DD/MM/AAAA")
-  query.append(date)
-  var = date.split("/")
-  varD = int(var[0]-1)
-  varM = int(var[1]-1)
+  for i in range(len(variables)):
+    query.append(input("{}: ".format(variables[i])))
+  var = query[3].split("/")
+  varD = (int(var[0])-1)
+  varM = (int(var[1])-1)
   df[varM][varD] = df[varM][varD]+1
   gp.saveDataFrame(df)
-  hour = input("Horário: ")
-  query.append(hour)
   querys.append(query)
   saveQuery(querys)
   print("Consulta Marcarda!!!")
@@ -132,11 +74,12 @@ def removeDoctor(): ## função para remover medicos do sistema
       doctorRecord = i
   if findTrue:
     msgAccept = "Tem certeza que deseja remover o médico {} ?[y/n]: ".format(doctorRecord[0])
-    if validateToContinue(msgAccept):
+    if validate.validateToContinue(msgAccept):
       doctors.remove(doctorRecord)
       saveDoctor(doctors)
   else:
     print("Médico não encontrado!!")
+  msgRepeat = "Deseja continuar removendo Médicos?[y/n] "
   validate.validateToRepeat(msgRepeat, lambda: removeDoctor())
 
 def removeQuery():
@@ -148,19 +91,20 @@ def removeQuery():
   for query in querys:
     if query[0] == queryId:
       print(query)
+      queryRecord = query
       findTrue = True
 
   if findTrue:
     msg = "Tem certeza que deseja remover a consulta [y/n]"
-    if validateToContinue(msg):
-      querys.remove(query)
+    if validate.validateToContinue(msg):
+      querys.remove(queryRecord)
+      var = queryRecord[3].split("/")
+      varD = (int(var[0]) - 1)
+      varM = (int(var[1]) - 1)
+      df[varM][varD] = df[varM][varD] - 1
+      gp.saveDataFrame(df)
       saveQuery(querys)
-  
-  else:    
+  else:
     print("Consulta não encontrada!!")
-  msgRepet = "Deseja continuar removendo consultas?[y/n] "
-  validate.validateToRepeat(msg, lambda: removeQuery())
-
-
-
-  
+  msgRepeat = "Deseja continuar removendo consultas?[y/n] "
+  validate.validateToRepeat(msgRepeat, lambda: removeQuery())
