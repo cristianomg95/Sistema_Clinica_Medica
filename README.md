@@ -50,4 +50,9 @@ onde cada tipo de dado (Pacientes, Médicos, Consultas) foi separado em 1 arquiv
 - Funções que lidam com Ids foram escritas no arquivo generateId.py
 - Funções que lidam com a folha de pagamento foram escritas no arquivo payRoll.py
 
-
+# Screenshots do Sistema
+![Banana](http://cdn.osxdaily.com/wp-content/uploads/2013/07/dancing-banana.gif)
+![MENU](img/tela_menu.jpg)
+![CONSULTAS](img/tela_lista_consultas.jpg)
+![GRAFICO_1](img/grafico_consultas_dia.jpg)
+![GRAFICO_2](img/grafico_Consultas_mes.jpg)
