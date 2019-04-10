@@ -12,6 +12,15 @@ O sistema foi desenvolvido em python utilizando o paradigma de programação est
 # Objetivo do Projeto
 O objetivo do projeto é praticar o manuseio de novas bibliotecas apresentadas na disciplina 
 
+# Bibliotecas utilizadas
+- Pandas
+- NumPy
+- Matplotlib
+- Os 
+- time
+- Random
+- Pickle
+
 # Funções que o sistema possui
 
 - Cadastro de paciente (nome, email, telefone, rg, cpf, endereço, numero, bairro, cidade, uf, plano de saúde)
