@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1bf3b88-03f4-4890-97a5-ac036105cc1c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sistema_clinica_medica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sistema_clinica_medica.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dados/dataframe.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/dados/dataframe.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dados/doctors.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/dados/doctors.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dados/patients.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/dados/patients.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dados/querys.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/dados/querys.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/graphcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payRoll.py" beforeDir="false" afterPath="$PROJECT_DIR$/payRoll.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printAll.py" beforeDir="false" afterPath="$PROJECT_DIR$/printAll.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register_remove.py" beforeDir="false" afterPath="$PROJECT_DIR$/register_remove.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state relative-caret-position="314">
+              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -63,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graphcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="85">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -233,12 +223,12 @@
       <workItem from="1554841306254" duration="1176000" />
       <workItem from="1554843666385" duration="241000" />
       <workItem from="1554844420393" duration="14172000" />
-      <workItem from="1554859114118" duration="2436000" />
+      <workItem from="1554859114118" duration="3105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24783000" />
+    <option name="totallyTimeSpent" value="25452000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -390,8 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/graphcs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="85">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -400,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state relative-caret-position="314">
+          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>

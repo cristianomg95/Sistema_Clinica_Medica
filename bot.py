@@ -1,9 +1,9 @@
 import load_Save as sv
 import graphcs as gp
 from random import randint
-from generateId import generateId, loadIds
+import generateId as gID
 querys = sv.loadQuerys()
-ids = loadIds(querys)
+ids = gID.loadIds(querys)
 df = gp.loadDataFrame()
 for i in range(210):
     query = []
@@ -18,7 +18,7 @@ for i in range(210):
     date = "{}/{}/{}".format(day, month, year)
     hour = "{}:{}".format(h, m)
     variables = [doctor, patient, date, hour]
-    query.append(generateId(ids))
+    query.append(gID.generateId(ids))
     for k in range(len(variables)):
         query.append("{}: ".format(variables[k]))
     var = date.split("/")
